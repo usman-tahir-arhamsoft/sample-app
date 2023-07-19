@@ -1,0 +1,46 @@
+<div class="col-lg-12">
+    <div class="card rounded-0 mt-5 mb-5">
+        <div class="card-body">
+            <h2 class="text-center"> Employee Details </h2>
+        </div>
+    </div>
+
+    <div class= "row">
+        <div class="col-lg-6">
+            <h3 class="text-center"> Persoanl Information </h3>
+            <p class="lead">
+                <strong> First Name: </strong>
+                <%= @employee.first_name%>
+             </p> 
+             <p class="lead">
+                <strong> Last Name: </strong>
+                <%= @employee.last_name%>
+             </p> 
+             <p class="lead">
+                <strong> Email: </strong>
+                <%= @employee.email%>
+             </p> 
+             <p class="lead">
+                <strong> Phone #: </strong>
+                <%= @employee.phone_no%>
+             </p> 
+        </div>  
+        <div class="col-lg-6">
+            <h3 class="text-center"> Address Information </h3>
+            <p class="lead">
+                <strong> City: </strong>
+                <%= @employee.city.present? ? @employee.city : "NA"%>
+             </p> 
+             <p class="lead">
+                <strong> State: </strong>
+                <%= @employee.state.present? ? @employee.state : "NA"%>
+             </p> 
+             <p class="lead">
+                <strong> Country: </strong>
+                <%= @employee.country%>
+             </p> 
+        </div>  
+        <%= link_to " Back to Employee", employees_path, class: "btn btn-outline-primary btn-lg"%>
+        <%= link_to "Edit Employee", edit_employee_path(@employee), class:"btn btn-outline-primary btn-lg" %>
+    </div>
+</div>
