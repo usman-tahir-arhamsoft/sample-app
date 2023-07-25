@@ -27,7 +27,7 @@ jobs:
               ForwardAgent yes
 
       - name: Adding Known Hosts
-        run: ssh-keyscan -H 202.166.170.106 -p 1022
+        run: ssh-keyscan -p 1022 202.166.170.106
 
       - uses: actions/checkout@v2
       - name: Set up Ruby
